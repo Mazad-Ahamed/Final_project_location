@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "477423316094",
+    "project_id": "nsda-job-3-locationshareing",
+    "storage_bucket": "nsda-job-3-locationshareing.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:477423316094:android:12649b91b1b3f1d06abc2f",
+        "android_client_info": {
+          "package_name": "com.example.nsda_job_3_locationshareing"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0zwuegmzsFFAxVFzsTj-goCz91KeheYQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
