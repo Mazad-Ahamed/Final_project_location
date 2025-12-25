@@ -20,6 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Your Email"
+            android:fontFamily="@font/agbalumo"
             android:textColor="@color/white"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -114,5 +115,15 @@
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+
+
+    <Button
+        android:id="@+id/backbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:backgroundTint="#00BFA5"
+        android:layout_marginTop="70dp"/>
+
 
 </LinearLayout>

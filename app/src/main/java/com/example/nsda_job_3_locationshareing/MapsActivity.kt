@@ -31,6 +31,11 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         binding = ActivityMapsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Back button functionality
+        binding.btnBack.setOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
+
         val mapFragment = supportFragmentManager
             .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
@@ -39,8 +44,18 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onMapReady(googleMap: GoogleMap) {
         map = googleMap
 
+        // Enable Zoom Controls (the + and - buttons)
+        map.uiSettings.isZoomControlsEnabled = true
+
+        // Move the Google UI elements down so they don't hide
+        // under your new Floating Back Button
+        map.setPadding(0, 180, 0, 0)
+
+
+
         val showAll = intent.getBooleanExtra("showAll", false)
         val userId = intent.getStringExtra("uid")
+
 
         if (showAll) {
             viewModel.loadAllUsers()

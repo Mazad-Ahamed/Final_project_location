@@ -59,6 +59,11 @@ class MyProfileActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.backbutton.setOnClickListener {
+            val intent = Intent(this, FriendListActivity::class.java)
+            startActivity(intent)
+        }
+
         viewModel.usernameUpdateResult.observe(this) { success ->
             if (success) Toast.makeText(this, "Username updated!", Toast.LENGTH_SHORT).show()
             else Toast.makeText(this, "Update failed", Toast.LENGTH_SHORT).show()
